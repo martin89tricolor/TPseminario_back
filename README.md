@@ -12,11 +12,6 @@ Integrantes:
 * Taborda, Franco Ariel
 
 
-Usuario cliente de prueba:
-
-* Usuario: inewton@uade.edu.ar
-* Password: asd123
-
 # Cómo correrlo
 
 ```sh
