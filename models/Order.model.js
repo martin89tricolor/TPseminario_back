@@ -20,7 +20,6 @@ var OrderSchema = new mongoose.Schema({
     cantidad: Number,
     fechadonacion: String,
     fechaentrega: String,
-    total: Number,
     estado: String,
 })
 
