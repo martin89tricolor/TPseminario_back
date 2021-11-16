@@ -80,7 +80,7 @@ exports.deleteProductsById = async function (req, res, next) {
     const ids = req.body.ids;
     try {
         const results = await ProductService.deleteProductsById(ids);
-        const message = results.deletedCount === 1 ? `Se borró 1 producto` : `Se borraron ${results.deletedCount} productos`;
+        const message = results.deletedCount === 1 ? `Se borró 1 publicación` : `Se borraron ${results.deletedCount} publicaciones`;
         // Return the Users list with the appropriate HTTP password Code and Message.
         return res.status(200).json({
             status: 200,
@@ -119,11 +119,11 @@ exports.createProduct = async function (req, res, next) {
     try {
         // Calling the Service function with the new object from the Request Body
         var createdProduct = await ProductService.createProduct(Product)
-        return res.status(201).json({status: 201, data: createdProduct, message: "Succesfully Created Product"})
+        return res.status(201).json({status: 201, data: createdProduct, message: "Publicación Creada Exitosamente"})
     } catch (e) {
         //Return an Error Response Message with Code and the Error Message.
         console.log(e)
-        return res.status(400).json({status: 400, message: "Product Creation was Unsuccesfull"})
+        return res.status(400).json({status: 400, message: "Error al crear la publicación"})
     }
 }
 
