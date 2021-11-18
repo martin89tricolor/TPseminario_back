@@ -51,13 +51,15 @@ exports.createUser = async function (user) {
         comertialName: user.comertialName,
         email: user.email,
         password: hashedPassword,
+        cuit: user.cuit,
         address: {
             address1: user.address1,
             province: user.province,
             city: user.city,
+            cp: user.cp,
             phone: user.phone,
         },
-        isAdmin: false,
+        isAdmin: true,
         isGuest: false,
         avatar: '',
     });
