@@ -6,10 +6,12 @@ var UserSchema = new mongoose.Schema({
     comertialName: String,
     email: String,
     password: String,
+    cuit: Number,
     address: {
         address1: {type: String},
         province: {type: String},
         city: {type: String},
+        cp: {type: Number},
         phone: {type: String}
     },
     isAdmin: Boolean,
