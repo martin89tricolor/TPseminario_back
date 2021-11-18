@@ -68,10 +68,12 @@ exports.createUser = async function (req, res, next) {
         comertialName: req.body.comertialName,
         email: req.body.email,
         password: req.body.password,
+        cuit: req.body.cuit,
         address1: req.body.address1,
         province: req.body.province,
         city: req.body.city,
         phone: req.body.phone,
+        cp: req.body.cp,
     }
     try {
         // Calling the Service function with the new object from the Request Body
