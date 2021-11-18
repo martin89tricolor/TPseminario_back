@@ -6,6 +6,7 @@ var OrderSchema = new mongoose.Schema({
         user: {
             comertialName: String,
             email: String,
+            cuit: String,
         },
         products: [{
             product: {
