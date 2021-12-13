@@ -9,5 +9,6 @@ router.post('/', OrderController.createOrder);
 router.get('/', AdminAuthorization, OrderController.getOrders);
 router.get('/detail/:id', AdminAuthorization, OrderController.getOrderById);
 router.post('/update-status', AdminAuthorization, OrderController.updateOrderStatus);
+router.post('/update-status2', AdminAuthorization, OrderController.updateOrderStatus2);
 
 module.exports = router;
