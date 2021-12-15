@@ -13,7 +13,7 @@ exports.getProducts = async function (query, ordenamiento, page, limit) {
     var options = {
         page,
         limit,
-        sort: ordenamiento ? {precio: ordenamiento} : undefined,
+        sort: ordenamiento ? {fecha: ordenamiento} : undefined,
     }
     // Try Catch the awaited promise to handle the error
     try {
@@ -146,13 +146,11 @@ exports.getFilters = async function () {
         var zonas = await Product.distinct('zona');
         var marcas = await Product.distinct('marca');
         var categorias = await Product.distinct('categoria');
-        var fechas = await Product.distinct('fecha');
         // Return the Userd list that was retured by the mongoose promise
         return {
             zonas,
             marcas,
             categorias,
-            fechas,
         };
 
     } catch (e) {
