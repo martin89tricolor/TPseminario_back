@@ -121,7 +121,7 @@ exports.updateOrderStatus2 = async function (req, res, next) {
 
     try {
         var updatedOrders = await OrderService.updateOrderStatus2(req.body.ids, req.body.estado2)
-        return res.status(200).json({status: 200, message: `Se solicitaron ${updatedOrders.n} remitos.  Será enviado a su casilla de e-mail en un plazo de 24 horas.`})
+        return res.status(200).json({status: 200, message: `Se descargaron ${updatedOrders.n} remitos. `})
     } catch (e) {
         return res.status(400).json({status: 400., message: e.message})
     }
